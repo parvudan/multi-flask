@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/api/<version>')
 def home(version):
-    return render_template('index.html', api_version=version)
+    return f"API verion {version}"
 
 
 if __name__ == "__main__":
