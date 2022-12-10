@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask
+from requests.models import Response
 import os
 
 app = Flask(__name__)
@@ -6,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/api/<version>')
 def home(version):
-    return f"API verion {version}"
+    return Response(f"API verion {version}")
 
 
 if __name__ == "__main__":
