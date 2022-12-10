@@ -4,9 +4,9 @@ import os
 app = Flask(__name__)
 
 
-@app.route('/')
-def home():
-    return render_template('index.html')
+@app.route('/api/<version>')
+def home(version):
+    return render_template('index.html', api_version=version)
 
 
 if __name__ == "__main__":
