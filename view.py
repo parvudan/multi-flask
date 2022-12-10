@@ -10,6 +10,6 @@ def home():
 
 
 if __name__ == "__main__":
-    port = 5002
+    port = int(os.environ.get('PORT', 5000))
+    app.logger.info(f"Running on {port}")
     app.run(debug=True, host='0.0.0.0', port=port)
-    print(f"Running on {port}")
